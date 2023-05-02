@@ -15,9 +15,10 @@ require("./admin/db_config.php");
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mendoza Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -186,7 +187,6 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $values,'i'));
         <div class="content">
           <div class="contact-left">
             <h2>Let's discuss your project</h2>
-            <h5><?php $result;?></h5>
             <ul>
               <li class="contact-list">
                 <h3 class="item-title"><i class="fas fa-phone"></i> Phone</h3>
@@ -205,7 +205,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $values,'i'));
           <div class="contact-right">
             <p>I'm always open to discussing web development<br> <span>work or partnerships.</span></p>
 
-            <form action="" class="contact-form" method="post">
+            <form class="contact-form" method="POST">
               <div class="first-row">
                 <input type="text" placeholder="Name" name="name" id="name">
                 <input type="email" placeholder="Email" name="email" id="email">
@@ -232,12 +232,16 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $values,'i'));
 
         $res = insert($q,$values,'sss');
         if($res==1){
-         
-          alert('success','Your Inquiry has been successfully Send');
+          echo '<script type="text/javascript">';
+          echo 'swal("Send Successfully!", "I appreciate your contact and will get back to you as soon as I can.", "success");';
+          echo '</script>';
         }
         else{
-          alert('error','Try sending your inquiry again.');
+          echo '<script type="text/javascript">';
+          echo 'swal("Error!", "Try sending your inquiry again.", "error");';
+          echo '</script>';
         }
+        
       }
        
       
@@ -284,6 +288,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q, $values,'i'));
 
 
   <script src="js/mains.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

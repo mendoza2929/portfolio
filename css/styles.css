@@ -1309,4 +1309,15 @@ footer a{
             cursor: pointer;
         }
    }
+
+
    
+   
+
+   .custom-alert{
+    position:fixed;
+    bottom:55rem;
+    left:20%;
+    width: 30%;
+    
+  }

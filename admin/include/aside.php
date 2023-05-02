@@ -3,5 +3,6 @@
             <li class="nav-item"> <a class="nav-link " href="dash.php"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a></li>
             <li class="nav-item"> <a class="nav-link " href="setting.php"> <i class="bi bi-grid"></i> <span>Main Setting</span> </a></li>
             <li class="nav-item"> <a class="nav-link " href="portfolio.php"> <i class="bi bi-grid"></i> <span>Portfolio</span> </a></li>
+            <li class="nav-item"> <a class="nav-link " href="contact.php"> <i class="bi bi-grid"></i> <span>Contact</span> </a></li>
          </ul>
       </aside>

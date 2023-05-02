@@ -31,6 +31,7 @@ function redirect($url){
 }
 
 
+
 function alert($type, $message){
     $bs_class = ($type == 'success') ? "alert-success" : "alert-danger";
     echo <<<alert
@@ -45,6 +46,7 @@ function alert($type, $message){
         alert;
         
 }
+
 
 function uploadImage($image,$folder){
     $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
